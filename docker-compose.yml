@@ -4,7 +4,7 @@ development: &development
     - 2368:2368
   environment:
     NODE_ENV: development
-    VIRTUAL_HOST: localhost
+    VIRTUAL_HOST: http://localhost
     VIRTUAL_PORT: 2368
   volumes:
     - ./content/themes:/usr/src/ghost/content/themes
@@ -17,5 +17,5 @@ production:
   <<: *development
   environment:
     NODE_ENV: production
-    VIRTUAL_HOST: your_blog_url
+    VIRTUAL_HOST: http://your_blog_url
     VIRTUAL_PORT: 2368
