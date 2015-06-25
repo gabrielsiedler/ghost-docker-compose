@@ -1,0 +1,12 @@
+local:
+  image: ghost:latest
+  ports:
+    - 2368:2368
+  environment:
+    NODE_ENV: production
+  volumes:
+    - ./content/themes:/usr/src/ghost/content/themes
+    - ./content/apps:/usr/src/ghost/content/apps
+    - ./content/images:/usr/src/ghost/content/images
+    - ./content/data:/usr/src/ghost/content/data
+    - ./config:/var/lib/ghost
