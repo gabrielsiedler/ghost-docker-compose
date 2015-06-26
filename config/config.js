@@ -19,7 +19,9 @@ config = {
             },
             debug: false
         },
-
+        paths: {
+            contentPath: path.join(process.env.GHOST_CONTENT, '/')
+        },
         server: {
             // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',

@@ -17,5 +17,5 @@ production:
   <<: *development
   environment:
     NODE_ENV: production
-    VIRTUAL_HOST: http://your_blog_url
+    VIRTUAL_HOST: http://you.blog.url
     VIRTUAL_PORT: 2368
