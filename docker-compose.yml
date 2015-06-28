@@ -7,11 +7,7 @@ development: &development
     VIRTUAL_HOST: http://localhost
     VIRTUAL_PORT: 2368
   volumes:
-    - ./content/themes:/usr/src/ghost/content/themes
-    - ./content/apps:/usr/src/ghost/content/apps
-    - ./content/images:/usr/src/ghost/content/images
-    - ./content/data:/usr/src/ghost/content/data
-    - ./config:/var/lib/ghost
+    - ./ghost-override:/ghost-override
 
 production:
   <<: *development
