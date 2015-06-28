@@ -4,7 +4,7 @@ development: &development
     - 2368:2368
   environment:
     NODE_ENV: development
-    VIRTUAL_HOST: http://localhost
+    VIRTUAL_HOST: http://url-mutcho-loca
     VIRTUAL_PORT: 2368
   volumes:
     - ./ghost-override:/ghost-override
