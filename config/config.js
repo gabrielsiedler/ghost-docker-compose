@@ -19,14 +19,14 @@ config = {
             },
             debug: false
         },
-        paths: {
-            contentPath: path.join(process.env.GHOST_CONTENT, '/')
-        },
         server: {
             // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.VIRTUAL_PORT || '2368'
+        },
+        paths: {
+            contentPath: path.join(process.env.GHOST_CONTENT, '/')
         }
     },
 
@@ -67,68 +67,6 @@ config = {
         paths: {
             contentPath: path.join(process.env.GHOST_CONTENT, '/')
         }
-    },
-
-    // **Developers only need to edit below here**
-
-    // ### Testing
-    // Used when developing Ghost to run tests and check the health of Ghost
-    // Uses a different port number
-    testing: {
-        url: 'http://0.0.0.0:2369',
-        database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(process.env.GHOST_CONTENT, '/data/ghost-test.db')
-            }
-        },
-        server: {
-            host: '0.0.0.0',
-            port: '2369'
-        },
-        logging: false
-    },
-
-    // ### Testing MySQL
-    // Used by Travis - Automated testing run through GitHub
-    'testing-mysql': {
-        url: 'http://0.0.0.0:2369',
-        database: {
-            client: 'mysql',
-            connection: {
-                host     : '0.0.0.0',
-                user     : 'root',
-                password : '',
-                database : 'ghost_testing',
-                charset  : 'utf8'
-            }
-        },
-        server: {
-            host: '0.0.0.0',
-            port: '2369'
-        },
-        logging: false
-    },
-
-    // ### Testing pg
-    // Used by Travis - Automated testing run through GitHub
-    'testing-pg': {
-        url: 'http://0.0.0.0:2369',
-        database: {
-            client: 'pg',
-            connection: {
-                host     : '0.0.0.0',
-                user     : 'postgres',
-                password : '',
-                database : 'ghost_testing',
-                charset  : 'utf8'
-            }
-        },
-        server: {
-            host: '0.0.0.0',
-            port: '2369'
-        },
-        logging: false
     }
 };
 
