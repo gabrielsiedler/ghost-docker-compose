@@ -6,6 +6,7 @@ development: &development
     NODE_ENV: development
     VIRTUAL_HOST: http://localhost
     VIRTUAL_PORT: 2368
+    GHOST_CONTENT: /home/gabriel/Development/personal/blog
   volumes:
     - ./content/themes:/usr/src/ghost/content/themes
     - ./content/apps:/usr/src/ghost/content/apps
